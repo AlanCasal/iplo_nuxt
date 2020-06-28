@@ -1,0 +1,142 @@
+:root {
+	--text-muted: #6c757d;
+	--lightgray: #d3d3d3;
+	--light: #f1f1f1;
+	--color-success: #38c172;
+	--color-danger: #e3342f;
+	--iplo-darkred: rgb(100, 1, 1);
+	--iplo-medred: rgb(150, 1, 1);
+	--iplo-red: rgb(200, 1, 1);
+
+	--animate-duration: 1s;
+	--animate-delay: 1s;
+	--animate-repeat: 1;
+}
+
+.iplo-darkred {
+	color: rgb(100, 1, 1);
+}
+
+.iplo-medred {
+	color: rgb(150, 1, 1);
+}
+
+.iplo-red {
+	color: rgb(200, 1, 1);
+}
+
+html,
+body {
+	font-family: Forum, cursive !important;
+	touch-action: manipulation !important;
+}
+
+.waves-effect.waves-rava-blue .waves-ripple {
+	background-color: var(--lightgray);
+	color: white;
+}
+
+.color-lightgray {
+	color: var(--lightgray);
+}
+
+.text-success {
+	color: var(--color-success);
+}
+
+.text-danger {
+	color: var(--color-danger) !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.animated.fast {
+	-webkit-animation-duration: 700ms;
+	animation-duration: 700ms;
+}
+
+.animated.slow {
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+.animate__fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+.animate__fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.animate__animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-duration: var(--animate-duration);
+	animation-duration: var(--animate-duration);
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.animate__animated.animate__fadeIn {
+	--animate-duration: 5s;
+}

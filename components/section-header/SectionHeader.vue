@@ -1,0 +1,48 @@
+<template>
+	<header class="section-header">
+		<h3 v-text="title"></h3>
+		<div class="line"></div>
+	</header>
+</template>
+
+<script>
+	export default {
+		props: ['title'],
+	}
+</script>
+
+<style scoped>
+	h3 {
+		font-family   : 'Voltaire', sans-serif;
+		padding       : 50px 0 0 0;
+		font-size     : 36px;
+		font-weight   : bold;
+		color         : #111;
+		text-transform: uppercase;
+		text-align    : center;
+		position      : relative;
+		margin        : 0 0 15px 0;
+	}
+
+	.line {
+		width           : 150px;
+		height          : 1px;
+		background-color: darkgray;
+		margin          : 0 auto;
+		margin-bottom: 30px;
+		position        : relative;
+		z-index         : 1;
+	}
+
+	.line::after {
+		content   : '';
+		position  : relative;
+		display   : block;
+		width     : 40px;
+		height    : 3px;
+		/* background: black; */
+		background: var(--iplo-medred);
+		bottom    : 1px;
+		left      : calc(50% - 20px);
+	}
+</style>

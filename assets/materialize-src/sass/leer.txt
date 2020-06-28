@@ -1,0 +1,13 @@
+https://ghariaonline.wordpress.com/2016/03/14/materialize-css-changing-default-theme-with-sass/
+
+1. bajar sass
+https://sass-lang.com/install
+
+2. Abrir:
+- sass > components > _variables.scss
+- Cambiar colores/values que vienen por default
+
+3. Abrir consola en donde está materialize.scss y ejecutar:
+sass materialize.scss materialize.css
+
+Esto genera un materialize.css. Ponerlo en public/css y usarlo
