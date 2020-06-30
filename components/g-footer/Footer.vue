@@ -1,5 +1,5 @@
 <template>
-	<footer>
+	<footer class="wow animate__fadeInUp">
 		<center>
 			<p>
 				Copyright &copy; {{year}}
@@ -37,6 +37,8 @@
 	p {
 		font-family: Voltaire, sans-serif;
 		color: white;
+		margin: 0;
+		font-size: 11px;
 	}
 
 	a {

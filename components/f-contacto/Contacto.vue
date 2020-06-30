@@ -46,15 +46,23 @@
 		font-family: "Open Sans", sans-serif;
 		font-style: italic;
 		margin: 20px 0;
+		text-align: justify;
 	}
 
-	@media (min-width: 1200px) {
+	@media (max-width: 767px) {
 		#palabras {
-			width: 1000px;
-			text-align: center;
+			font-size: 16px;
+			padding: 0 15px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		#palabras {
+			width: 700px;
 			position: relative;
 			left: 50%;
-			margin-left: -500px;
+			margin-left: -350px;
+			font-size: 18px;
 		}
 	}
 </style>

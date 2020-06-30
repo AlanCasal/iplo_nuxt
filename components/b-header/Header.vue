@@ -1,15 +1,24 @@
 <template>
 	<section>
-		<img src="/header.jpg" alt="" style="display: none" @load="show_header = true">
+		<img src="/header.jpg" alt="" style="display: none" @load="show_content">
 
-		<header v-if="show_header" class="wow animate__fadeIn animated fast">
+		<header class="animated fadeIn fast">
+			<div id="header-text-wrapper">
+				<div v-if="show_header" class="wow animated slow animate__fadeIn">
+					<h1 class="lagrimas">
+						Lágrimas bajo tierra <span>I</span>
+					</h1>
+					<h2 class="iluminados">Iluminados por la oscuridad</h2>
+				</div>
 
-			<div id="header-text-wrapper" class="wow animated slow animate__fadeIn">
-				<p class="lagrimas">Lágrimas bajo tierra <span>I</span></p>
-				<p class="iluminados">Iluminados por la oscuridad</p>
-				<p class="texto">Tristeza, dolor y sufrimiento, malignos tumores de nuestra existencia difíciles de extirpar; nos afligen, nos carcomen, y nos creemos invictos cuando logramos vencerlos luego de una ardua lucha... que ingenuos... Imagina escarmentar sus latigazos en todo el cuerpo y a toda hora, desde que despiertas hasta que vuelves a despertar, una, y otra, y otra vez, hasta que el tiempo deje de ser tiempo.</p>
+				<a	v-show="show_btn"
+					@click.prevent="scroll_to(target)"
+					:class="pulse ? 'pulse' : ''"
+					class="wow animated slow animate__fadeInUp waves-effect waves-light btn z-depth-2">Ver más</a>
 			</div>
 		</header>
+
+
 		
 	</section>
 </template>
@@ -17,103 +26,147 @@
 <script>
 	export default {
 		data: () => ({
-			show_header: false
-		})
+			show_header: false,
+			show_btn: false,
+			pulse: true,
+			target: 'leer-section'
+		}),
+
+		methods: {
+			scroll_to(section) {
+				const offset = 20;
+				this.pulse = false;
+
+				$("html, body").animate({
+					scrollTop: $("#" + section).offset().top + offset
+				}, 700);
+			},
+
+			show_content() {
+				this.show_header = true;
+				setTimeout(() => this.show_btn = true, 1000);
+			}
+		}
 	};
 </script>
 
 <style scoped>
 	header {
-		/* min-height: calc(100vh - 62px); */
-		min-height: 100vh;
-		background-size: cover;
+		background-size    : cover;
 		background-position: center;
-		background-image: url('/header.jpg');
+		background-image   : url('/header.jpg');
 	}
 
 	#header-text-wrapper {
 		position: absolute;
 		text-align: center;
-		margin-top: 20vh;
-	}
-
-	p {
-		color: white;
-		display: inline-block;
-		/* text-shadow: 2px 2px 4px black, -2px -2px 4px black; */
 	}
 
 	.lagrimas, 
 	.iluminados {
 		text-transform: uppercase;
 		text-shadow: 2px 2px 4px black, -2px -2px 4px black, 1px 1px 1px black, 6px 6px 9px black, -6px -6px 9px black;
-	}
-
-	.texto {
-		text-transform: uppercase;
-		font-style: italic;
-		text-shadow: 2px 2px 4px black, -2px -2px 4px black, 1px 1px 1px black, 6px 6px 9px black, -6px -6px 9px black;
+		margin: 0;
+		color: white;
+		display: inline-block;
 	}
 
 	.lagrimas span {
 		font-family: 'Times New Roman', Times, serif;
 	}
 
-	@media (max-width: 599px) {
-		/* #header-text-wrapper {
-			margin-top: 170px;
-		} */
+	a {
+		border-radius: 30px;
+		margin-top: 30px;
+		letter-spacing: 2px;
+		width: 120px;
+		font-family: Voltaire, sans-serif;
+	}
+
+	@media (max-width: 329px) {
+		header {
+			height: 500px;
+		}
+
+		#header-text-wrapper {
+			width: 100%;
+			top: 130px;
+		}
 
 		.lagrimas, 
 		.iluminados {
-			font-size: 26px;
-			width: 100%;
+			font-size: 35px;
 		}
 
-		.texto {
-			width: 300px;
+		.iluminados {
 			margin-top: 20px;
-			font-size: 14px;
 		}
 	}
 
-	@media (min-width: 600px) and (max-width: 992px) {
-		p {
-			width: 500px;
+	@media (min-width: 330px) and (max-width: 499px) {
+		header {
+			height: 600px;
 		}
 
-		.lagrimas, 
-		.iluminados {
-			font-size: 45px;
-			width: 590px;
-		}
-
-		.texto {
-			margin-top: 30px;
-		}
-	}
-
-	@media (min-width: 993px) {
-		p {
-			width: 800px;
-		}
-
-		.lagrimas, 
-		.iluminados {
-			line-height: 1;
-			font-size: 55px;
-		}
-
-		.texto {
-			margin-top: 50px;
-			font-size: 21px;
-		}
-	}
-
-	@media (min-width: 1600px) {
-		.lagrimas,
-		.iluminados {
+		#header-text-wrapper {
 			width: 100%;
+			top: 200px;
+		}
+
+		.lagrimas, 
+		.iluminados {
+			font-size: 35px;
+		}
+
+		.iluminados {
+			margin-top: 20px;
+		}
+	}
+
+	@media (min-width: 500px) and (max-width: 767px) {
+		header {
+			height: 600px;
+		}
+
+		#header-text-wrapper {
+			width: 100%;
+			top: 200px;
+		}
+
+		.lagrimas, 
+		.iluminados {
+			font-size: 40px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		header {
+			height: 800px;
+		}
+
+		#header-text-wrapper {
+			width: 700px;
+			top: 300px;
+			margin-left: -350px;
+			left: 50%;
+		}
+
+		.lagrimas, 
+		.iluminados {
+			font-size: 50px;
+		}
+	}
+
+	@media (min-width: 1201px) {
+		#header-text-wrapper {
+			width: 800px;
+			top: 300px;
+			margin-left: -400px;
+		}
+
+		.lagrimas, 
+		.iluminados {
+			font-size: 55px;
 		}
 	}
 </style>

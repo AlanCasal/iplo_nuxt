@@ -79,6 +79,7 @@
 <style scoped>
 	#autor-section {
 		background: #f7f7f7;
+		padding-bottom: 30px;
 	}
 
 	#lionar-img {
@@ -119,36 +120,43 @@
 		margin-left: 15px;
 	}
 
-	#quote-sign-left {
-		margin-top: -15px;
-		padding-right: 10px;
+	#quote-sign-left,
+	#quote-sign-right {
 		display: inline-block;
 		width: 37px;
 	}
 	
+	#quote-sign-left {
+		margin-bottom: 5px;
+		padding-right: 10px;
+	}
+	
 	#quote-sign-right {
-		margin-bottom: -15px;
+		margin-bottom: 5px;
 		padding-left: 10px;
-		display: inline-block;
-		max-width: 100%;
-		width: 37px;
 	}
 
 	#palabras p {
 		color: #666666;
 		font-family: "Open Sans", sans-serif;
 		font-style: italic;
-		margin: 20px 0;
+		text-align: justify;
 	}
 
-	@media (min-width: 1200px) {
+	@media (max-width: 767px) {
 		#palabras {
-			width: 1000px;
-			text-align: center;
+			font-size: 16px;
+			padding: 0 15px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		#palabras {
+			width: 700px;
 			position: relative;
 			left: 50%;
-			margin-left: -500px;
-			padding-bottom: 100px;
+			margin-left: -350px;
+			font-size: 18px;
 		}
 	}
 </style>
