@@ -54,10 +54,10 @@
 								<span v-show="textarea_err != ''" class="helper-text text-danger" v-text="textarea_err"></span>
 								
 								<span id="span-enviado"
-									style="color: var(--color-success); font-weight: bold"
 									class="helper-text"
 									:class="enviado ? 'fadein' : 'fadeout'">
 										¡Tu mensaje fue enviado!
+										<i class="material-icons">done</i>
 								</span>
 
                                 <label :class="textarea_err != '' && textarea != '' 
@@ -264,6 +264,18 @@
 
 	#btn-submit {
 		width: 200px;
+	}
+
+	#span-enviado {
+		color: var(--color-success); 
+		font-weight: bold;
+	}
+
+	#span-enviado i {
+		font-size: 18px;
+		left: 5px;
+		position: relative;
+		top: 3px;
 	}
 
 	#span-enviado.fadein {

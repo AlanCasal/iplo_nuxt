@@ -65,10 +65,10 @@
 
 			redes() {
 				return [
-					{href: 'https://twitter.com/Lionar_St', id: 'tw', src: require('@/assets/img/social/twitter.svg'), alt: 'twitter'},
-					{href: 'https://www.facebook.com/LagrimasBajoTierra/', id: 'fb', src: require('@/assets/img/social/facebook.svg'), alt: 'facebook'},
-					{href: 'https://www.instagram.com/lionar_stormrage/?hl=es-la', id: 'ig', src: require('@/assets/img/social/instagram.svg'), alt: 'ig'},
-					{href: 'https://www.wattpad.com/user/LionarStormrage', id: 'wp', src: require('@/assets/img/social/wattpad.svg'), alt: 'wattpad'},
+					{href: 'https://twitter.com/Lionar_St', id: 'tw', src: require('@/assets/img/social/tw.png'), alt: 'twitter'},
+					{href: 'https://www.facebook.com/LagrimasBajoTierra/', id: 'fb', src: require('@/assets/img/social/fb.png'), alt: 'facebook'},
+					{href: 'https://www.instagram.com/lionar_stormrage/?hl=es-la', id: 'ig', src: require('@/assets/img/social/ig.png'), alt: 'ig'},
+					{href: 'https://www.wattpad.com/user/LionarStormrage', id: 'wp', src: require('@/assets/img/social/wp.png'), alt: 'wattpad'},
 				]
 			}
 		}
@@ -114,6 +114,25 @@
 	.social-wrapper img {
 		width: 30px;
 		margin-top: 30px;
+		filter: gray; /* IE6-9 */
+		-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+		transition: filter 0.5s;
+		-webkit-transition: transform .2s ease-in-out 0s;
+		-moz-transition: transform .2s ease-in-out 0s;
+		-ms-transition: transform .2s ease-in-out 0s;
+		-o-transition: transform .2s ease-in-out 0s;
+		transition: transform .2s ease-in-out 0s;
+	}
+
+	.social-wrapper img:hover {
+		-webkit-filter: grayscale(0%);
+		filter: grayscale(0%);
+		transform: scale(1.3);
+		-webkit-transition: transform .2s ease-in-out 0s;
+		-moz-transition: transform .2s ease-in-out 0s;
+		-ms-transition: transform .2s ease-in-out 0s;
+		-o-transition: transform .2s ease-in-out 0s;
+		transition: transform .2s ease-in-out 0s;
 	}
 
 	.ml {

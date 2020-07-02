@@ -2,7 +2,7 @@
 	<section>
 		<img src="/header.jpg" alt="" style="display: none" @load="show_content">
 
-		<header class="animated fadeIn fast">
+		<header id="header-parallax" class="animated fadeIn fast">
 			<div id="header-text-wrapper">
 				<div v-if="show_header" class="wow animated slow animate__fadeIn">
 					<h1 class="lagrimas">
@@ -29,7 +29,7 @@
 			show_header: false,
 			show_btn: false,
 			pulse: true,
-			target: 'leer-section'
+			target: 'libro-section'
 		}),
 
 		methods: {
@@ -45,23 +45,24 @@
 			show_content() {
 				this.show_header = true;
 				setTimeout(() => this.show_btn = true, 1000);
-			}
+			},
 		}
 	};
 </script>
 
 <style scoped>
 	header {
-		background-size    : cover;
 		background-position: center;
 		background-image   : url('/header.jpg');
+		background-attachment: fixed;
+		background-size: cover;
 	}
 
 	#header-text-wrapper {
 		position: absolute;
 		text-align: center;
 	}
-
+	
 	.lagrimas, 
 	.iluminados {
 		text-transform: uppercase;

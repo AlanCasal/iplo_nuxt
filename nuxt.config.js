@@ -4,6 +4,11 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   }
 } : {};
 
+/** // FIXME: ALAN
+ * arreglar ese paddin(?)
+ * molesto en mobile
+ */
+
 export default {
 	...routerBase,
 
@@ -12,39 +17,25 @@ export default {
 	 ** Headers of the page
 	 */
 
-	/** // TODO: ALAN
-	 * og tags
-	 */
-	// <meta property="og:type" content="website" />
-
-	// <meta property="og:title" content="Rava Bursátil - Acciones Argentinas" />
-	// <meta name="twitter:title" content="Rava Bursátil - Acciones Argentinas">
-	// <meta name="title" content="Rava Bursátil - Acciones Argentinas">
-
-	// <meta property="og:url" content="http://datos.rava.com/cotizaciones/acciones-argentinas" />
-
-	// <meta property="og:site_name" content="Acciones Argentinas - Cotizaciones" />
-
-	// <meta property="fb:app_id" content="390394357739615" />
-
-	// {{--<meta property="og:image" content="{{asset('img/rava/og-logo.png')}}" />--}}
-	// {{--<meta property="og:image:width" content="1000" />--}}
-	// {{--<meta property="og:image:height" content="1011" />--}}
-
-	// <meta property="og:description" content="Acciones Argentinas - Cotizaciones" />
-	// <meta name="twitter:description" content="Acciones Argentinas - Cotizaciones">
-	// <meta name="description" content="Acciones Argentinas - Cotizaciones">
-
-	// <meta name="keywords" content="cotizaciones,argentinas,cedears,merval,rava,ravaonline,bolsa,Bursátil,bursatil,cartera,dolares,activos,invertir,adr,activos,operar,acciones,sociedad">
-
-	// <meta name="twitter:site" content="@ravabursatil">
-
-	// <meta name="apple-mobile-web-app-title" content="Rava Bursátil - Acciones Argentinas">
-	// <meta name="application-name" content="Rava Bursátil - Acciones Argentinas">
-
 	head: {
 		title: "Lágrimas bajo tierra - Iluminados por la oscuridad",
-		meta: [{charset: "utf-8"}, {name: "viewport", content: "width=device-width, initial-scale=1"}, {hid: "description", name: "description", content: process.env.npm_package_description || ""}],
+		meta: [
+			{charset: "utf-8"},
+			{name: "viewport", content: "width=device-width, initial-scale=1"},
+			{hid: "description", name: "description", content: process.env.npm_package_description || ""},
+			{name: "author", content: "Alan Casal"},
+			{name: "copyright", content: "Alan Casal"},
+			{name: "keywords", content: "lagrimas bajo tierra,iluminados por la oscuridad,lionar,stormrage,carlos orellano,libro"},
+			{property: "og:title", content: "Lágrimas Bajo Tierra I - Iluminados por la Oscuridad"},
+			{property: "og:url", content: "https://alancasal.github.io/"},
+			{property: "og:description", content: "Tristeza, dolor y sufrimiento, malignos tumores de nuestra existencia difíciles de extirpar; nos afligen, nos carcomen, y nos creemos invictos cuando logramos vencerlos luego de una ardua lucha... que ingenuos... Imagina escarmentar sus latigazos en todo el cuerpo y a toda hora, desde que despiertas hasta que vuelves a despertar, una, y otra, y otra vez, hasta que el tiempo deje de ser tiempo"},
+			{property: "og:type", content: "book"},
+			{property: "og:type", content: "book"},
+			{property: "og:image", content: "https://alancasal.github.io/header.jpg"},
+			{name: "twitter:card", content: "summary"},
+			{name: "twitter:site", content: "@Lionar_St"},
+			{name: "twitter:creator", content: "@Lionar_St"},
+		],
 		link: [
 			{
 				rel: "icon",
@@ -83,19 +74,19 @@ export default {
 
 		script: [
 			{
-				src : "/wow.min.js",
+				src: "/wow.min.js",
 				body: true,
 			},
 			{
-				src : "https://smtpjs.com/v3/smtp.js",
+				src: "https://smtpjs.com/v3/smtp.js",
 				body: true,
 			},
 			{
-				src        : "https://code.jquery.com/jquery-3.5.1.min.js",
-				integrity  : "sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=",
+				src: "https://code.jquery.com/jquery-3.5.1.min.js",
+				integrity: "sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=",
 				crossorigin: "anonymous",
 				crossOrigin: "anonymous",
-				body       : true,
+				body: true,
 			},
 		],
 	},

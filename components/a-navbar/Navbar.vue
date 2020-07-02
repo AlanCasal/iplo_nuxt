@@ -1,33 +1,35 @@
 <template>
 	<nav class="z-depth-0">
 		<div class="nav-wrapper">
-			<a @click="show_sidenav = true"
+			<!-- <a @click="show_sidenav = true"
 				data-target="sidenav-menu"
 				href="#"
 				class="menu-btn sidenav-trigger show-on-large">
 				<i class="material-icons left">menu</i>
-			</a>
-
+			</a> -->
 			<ul id="nav-mobile" class="right">
 				<li>
-					<a @click="scroll_to('leer-section')">
-						<i class="material-icons left">format_align_center</i>Leer
+					<a @click="scroll_to('leer-section')" class="nav-link">
+						<i class="material-icons left">format_align_center</i>
+						<span class="hide-on-small-only">Leer</span>
 					</a>
 				</li>
 				<li>
-					<a @click="scroll_to('autor-section')">
-						<i class="material-icons left">person_pin</i>Acerca del autor
+					<a @click="scroll_to('autor-section')" class="nav-link">
+						<i class="material-icons left">person_pin</i>
+						<span class="hide-on-small-only">Acerca del autor</span>
 					</a>
 				</li>
 				<li>
-					<a @click="scroll_to('contacto-section')">
-						<i class="material-icons left">mail</i>Contacto
+					<a @click="scroll_to('contacto-section')" class="nav-link">
+						<i class="material-icons left">mail</i>
+						<span class="hide-on-small-only">Contacto</span>
 					</a>
 				</li>
 			</ul>
 		</div>
 
-		<ul id="sidenav-menu" class="sidenav">
+		<!-- <ul id="sidenav-menu" class="sidenav">
 			<a class="btn-flat btn-close-sidenav sidenav-close">
 				<i class="material-icons">close</i>
 			</a>
@@ -62,7 +64,7 @@
 					<img :src="red.src" :id="red.id" :alt="red.alt" />
 				</a>
 			</div>
-		</ul>
+		</ul> -->
 	</nav>
 </template>
 
@@ -77,7 +79,7 @@
 		}),
 
 		mounted() {
-			this.materialize_components();
+			// this.materialize_components();
 		},
 
 		methods: {
@@ -148,6 +150,15 @@
 						alt: "wattpad"
 					}
 				];
+			},
+
+			redes() {
+				return [
+					{href: 'https://twitter.com/Lionar_St', id: 'tw', src: require('@/assets/img/social/tw.png'), alt: 'twitter'},
+					{href: 'https://www.facebook.com/LagrimasBajoTierra/', id: 'fb', src: require('@/assets/img/social/fb.png'), alt: 'facebook'},
+					{href: 'https://www.instagram.com/lionar_stormrage/?hl=es-la', id: 'ig', src: require('@/assets/img/social/ig.png'), alt: 'ig'},
+					{href: 'https://www.wattpad.com/user/LionarStormrage', id: 'wp', src: require('@/assets/img/social/wp.png'), alt: 'wattpad'},
+				]
 			}
 		}
 	};
@@ -156,9 +167,14 @@
 <style scoped>
 	nav {
 		background-color: transparent;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 0, 0, 0));
+		background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+		background-image:    -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Firefox (3.6 to 15) */
+		background-image:      -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For old Opera (11.1 to 12.0) */ 
+		background-image:         linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Standar */
 		position: absolute;
 		top: 0;
+		position: fixed;
+		z-index: 3;
 	}
 
 	#logo-img {
@@ -178,8 +194,8 @@
 		padding-right: 30px;
 	}
 
-	#nav-mobile li a,
-	.sidenav-trigger {
+	#nav-mobile li a/* ,
+	.sidenav-trigger */ {
 		text-shadow: 2px 2px 4px black, -2px -2px 4px black, 1px 1px 1px black,
 			6px 6px 9px black, -6px -6px 9px black;
 		-webkit-transition: color 0.9s ease 0s, text-shadow 0.9s ease 0s;
@@ -189,8 +205,8 @@
 		transition: color 0.9s ease 0s, text-shadow 0.9s ease 0s;
 	}
 
-	#nav-mobile li a:hover,
-	.sidenav-trigger:hover {
+	#nav-mobile li a:hover/* ,
+	.sidenav-trigger:hover */ {
 		color: var(--iplo-red);
 		-webkit-transition: color 0.6s ease 0s, text-shadow 0.6s ease 0s;
 		-moz-transition: color 0.6s ease 0s, text-shadow 0.6s ease 0s;
@@ -230,7 +246,7 @@
 		text-shadow: 2px 2px 4px black, 9px 9px 4px black, -2px -2px 4px black, -9px -9px 4px black;
 	}
 
-	#lagrimas-sidenav {
+	/* #lagrimas-sidenav {
 		top: 120px;
 	}
 
@@ -251,7 +267,6 @@
 	}
 
 	.sidenav-link:hover {
-		/* background-color: rgba(0, 0, 0, 0.1); */
 		color: white;
 		-webkit-transition: background-color 0.6s ease 0s;
 		-moz-transition: background-color 0.6s ease 0s;
@@ -296,9 +311,20 @@
 	.social-wrapper img {
 		width: 20px;
 		margin-top: 30px;
+	} */
+
+	@media (max-width: 380px) {
+		#nav-mobile {
+			padding: 0;
+		}
+
+		.material-icons {
+			padding: 0 !important;
+			margin: 0 !important;
+		}
 	}
 
-	@media (max-width: 699px) {
+	/* @media (max-width: 699px) {
 		#nav-mobile {
 			display: none;
 		}
@@ -307,5 +333,5 @@
 			float: right;
 			padding-right: 30px;
 		}
-	}
+	} */
 </style>

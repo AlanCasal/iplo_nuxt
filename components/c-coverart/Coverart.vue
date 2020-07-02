@@ -1,5 +1,5 @@
 <template>
-	<section id="leer-section">
+	<section id="libro-section">
 
 		<div class="wow animate__fadeInUp">
 			<div id="libro-div">
@@ -52,6 +52,22 @@
 	#libro-img {
 		border-radius: 4px;
 		box-shadow   : 5px 5px 4px rgba(0, 0, 0, .5);
+		-webkit-transition: transform .2s ease-in-out 0s, background-color .2s ease-in-out 0s, box-shadow .2s ease-in-out 0s;
+		-moz-transition: transform .2s ease-in-out 0s, background-color .2s ease-in-out 0s, box-shadow .2s ease-in-out 0s;
+		-ms-transition: transform .2s ease-in-out 0s, background-color .2s ease-in-out 0s, box-shadow .2s ease-in-out 0s;
+		-o-transition: transform .2s ease-in-out 0s, background-color .2s ease-in-out 0s, box-shadow .2s ease-in-out 0s;
+		transition: transform .2s ease-in-out 0s, background-color .2s ease-in-out 0s, box-shadow .2s ease-in-out 0s;
+	}
+
+	#libro-img:hover {
+		z-index: 2;
+		box-shadow: 5px 10px 30px rgba(0, 0, 0, .4);
+		transform: scale(1.04);
+		-webkit-transition: transform .2s ease-in-out 0s, background-color .2s ease-in-out 0s, box-shadow .2s ease-in-out 0s;
+		-moz-transition: transform .2s ease-in-out 0s, background-color .2s ease-in-out 0s, box-shadow .2s ease-in-out 0s;
+		-ms-transition: transform .2s ease-in-out 0s, background-color .2s ease-in-out 0s, box-shadow .2s ease-in-out 0s;
+		-o-transition: transform .2s ease-in-out 0s, background-color .2s ease-in-out 0s, box-shadow .2s ease-in-out 0s;
+		transition: transform .2s ease-in-out 0s, background-color .2s ease-in-out 0s, box-shadow .2s ease-in-out 0s;
 	}
 
 	@media (max-width: 767px) {

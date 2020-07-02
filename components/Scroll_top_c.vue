@@ -10,7 +10,8 @@
 </template>
 
 <script>
-    import Scroll_c from "./Scroll_c";
+	import Scroll_c from "./Scroll_c";
+	
     export default {
         components: {
             Scroll_c
