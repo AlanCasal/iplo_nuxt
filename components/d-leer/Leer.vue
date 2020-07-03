@@ -47,7 +47,7 @@
 <style scoped>
 	#leer-section {
 		padding-bottom: 70px;
-		background-image: url('~assets/img/leer-t.jpg');
+		background-image: url('~assets/img/leer-t.webp');
 		background-attachment: fixed;
 		background-size: cover;
 	}
@@ -105,17 +105,22 @@
 		}
 
 		.vr {
-			width      : 112px;
+			display: none;
+			/* width      : 112px;
 			height     : 1px;
 			position   : relative;
 			left       : 50%;
 			bottom     : 151px;
 			margin-left: -56px;
-			background-color: var(--iplo-red);
+			background-color: var(--iplo-red); */
 		}
 
 		.capitulo-wrapper:not(:last-child) {
 			margin-bottom: 30px;
+		}
+
+		.inicial {
+			text-shadow: 0 0 15px var(--iplo-red);
 		}
 
 	}

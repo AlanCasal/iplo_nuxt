@@ -6,7 +6,7 @@
 			<div id="palabras">
 				<p v-for="(t, key) of texto" v-text="t" :key="key"></p>
 
-				<a href="mailto:lionarstormrage@gmail.com" class="btn waves-effect waves-light z-depth-1">
+				<a href="mailto:lionarstormrage@gmail.com" class="btn waves-effect waves-light z-depth-1 pulse">
 					Enviar mensaje
 					<i class="material-icons right">mail</i>
 				</a>

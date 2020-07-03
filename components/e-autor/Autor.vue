@@ -4,7 +4,7 @@
 		<div class="wow animate__fadeInUp">
 			<section-header :title="title"/>
 	
-			<img id="lionar-img" src="@/assets/img/lionar.jpg" alt="">
+			<img id="lionar-img" src="@/assets/img/lionar.webp" alt="">
 	
 			<div id="lionar-data">
 				<h3>Lionar Stormrage</h3>
@@ -59,7 +59,6 @@
 					"No te voy a mentir, en dos o tres ocasiones me he replanteado mi propia ética y moral ante escenas tan sangrientas que me han revuelto el estómago, con un detallismo tan perverso que por poco cometo el error de someterlas al tan detestable proceso de censura. Afortunadamente junté el coraje suficiente para no hacerlo, dejando a un lado la preocupación de lo que pudieran llegar a pensar los más cercanos a mi.",
 					"Quiénes me conocen, sabrán que la perversidad que influencia mis escritos son un hecho aislado a mi personalidad, aunque debo admitir que me sentiría halagado si creyeran lo contrario, como el mérito que recibe todo actor ante una gran puesta en escena.",
 					"Así que, mi querido/a lector/a, el agradecimiento que siento para contigo supera las barreras de esta vida. Gracias eternas por tu valioso tiempo invertido en mis líneas, de corazón.",
-					// "Lionar Stormrage."
 				];
 			},
 

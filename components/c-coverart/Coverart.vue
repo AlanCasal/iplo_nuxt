@@ -3,7 +3,7 @@
 
 		<div class="wow animate__fadeInUp">
 			<div id="libro-div">
-				<img id="libro-img" src="@/assets/img/coverart-book.jpg" alt="libro">
+				<img id="libro-img" src="@/assets/img/coverart-book.webp" alt="libro">
 			</div>
 	
 			<div id="texto-div">

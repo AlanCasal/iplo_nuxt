@@ -1,10 +1,8 @@
 <template>
 	<section>
-		<img src="/header.jpg" alt="" style="display: none" @load="show_content">
-
 		<header id="header-parallax" class="animated fadeIn fast">
 			<div id="header-text-wrapper">
-				<div v-if="show_header" class="wow animated slow animate__fadeIn">
+				<div class="wow animated slow animate__fadeIn">
 					<h1 class="lagrimas">
 						Lágrimas bajo tierra <span>I</span>
 					</h1>
@@ -26,11 +24,14 @@
 <script>
 	export default {
 		data: () => ({
-			show_header: false,
 			show_btn: false,
 			pulse: true,
 			target: 'libro-section'
 		}),
+
+		mounted() {
+			setTimeout(() => this.show_btn = true, 1000);
+		},
 
 		methods: {
 			scroll_to(section) {
@@ -41,21 +42,16 @@
 					scrollTop: $("#" + section).offset().top + offset
 				}, 700);
 			},
-
-			show_content() {
-				this.show_header = true;
-				setTimeout(() => this.show_btn = true, 1000);
-			},
 		}
 	};
 </script>
 
 <style scoped>
 	header {
-		background-position: center;
-		background-image   : url('/header.jpg');
+		background-position  : center;
+		background-image     : url('/header.webp');
 		background-attachment: fixed;
-		background-size: cover;
+		background-size      : cover;
 	}
 
 	#header-text-wrapper {

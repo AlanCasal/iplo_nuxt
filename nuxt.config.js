@@ -1,12 +1,4 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/AlanCasal.github.io/'
-  }
-} : {};
-
 export default {
-	...routerBase,
-
 	mode: "universal",
 	/*
 	 ** Headers of the page
@@ -21,12 +13,12 @@ export default {
 			{name: "author", content: "Alan Casal"},
 			{name: "copyright", content: "Alan Casal"},
 			{name: "keywords", content: "lagrimas bajo tierra,iluminados por la oscuridad,lionar,stormrage,carlos orellano,libro"},
+			{property: "og:url", content: "https://www.lbtiluminadosporlaoscuridad.com.ar/"},
 			{property: "og:title", content: "Lágrimas Bajo Tierra I - Iluminados por la Oscuridad"},
-			{property: "og:url", content: "https://alancasal.github.io/"},
 			{property: "og:description", content: "Tristeza, dolor y sufrimiento, malignos tumores de nuestra existencia difíciles de extirpar; nos afligen, nos carcomen, y nos creemos invictos cuando logramos vencerlos luego de una ardua lucha... que ingenuos... Imagina escarmentar sus latigazos en todo el cuerpo y a toda hora, desde que despiertas hasta que vuelves a despertar, una, y otra, y otra vez, hasta que el tiempo deje de ser tiempo"},
 			{property: "og:type", content: "book"},
 			{property: "og:type", content: "book"},
-			{property: "og:image", content: "https://alancasal.github.io/header.jpg"},
+			{property: "og:image", content: "https://www.lbtiluminadosporlaoscuridad.com.ar/og-header.jpg"},
 			{name: "twitter:card", content: "summary"},
 			{name: "twitter:site", content: "@Lionar_St"},
 			{name: "twitter:creator", content: "@Lionar_St"},
@@ -39,6 +31,20 @@ export default {
 			},
 			{
 				href: "/Forum.woff2",
+				as: "font",
+				rel: "preload",
+				crossorigin: true,
+				crossOrigin: true,
+			},
+			{
+				href: "/Voltaire.woff2",
+				as: "font",
+				rel: "preload",
+				crossorigin: true,
+				crossOrigin: true,
+			},
+			{
+				href: "/Tangerine.woff2",
 				as: "font",
 				rel: "preload",
 				crossorigin: true,
@@ -65,15 +71,18 @@ export default {
 				crossorigin: true,
 				crossOrigin: true,
 			},
+			{
+				href: "/header.webp",
+				as: "image",
+				rel: "preload",
+				crossorigin: true,
+				crossOrigin: true,
+			},
 		],
 
 		script: [
 			{
 				src: "/wow.min.js",
-				body: true,
-			},
-			{
-				src: "https://smtpjs.com/v3/smtp.js",
 				body: true,
 			},
 			{
@@ -88,7 +97,7 @@ export default {
 	/*
 	 ** Customize the progress-bar color
 	 */
-	loading: {color: "#1d68a7", failedColor: "#e3342f", height: "5px"},
+	// loading: {color: "#1d68a7", failedColor: "#e3342f", height: "5px"},
 
 	/*
 	 ** Global CSS
@@ -111,8 +120,7 @@ export default {
 	 ** Nuxt.js modules
 	 */
 	modules: [
-		// Doc: https://axios.nuxtjs.org/usage
-		"@nuxtjs/axios",
+		// "@nuxtjs/axios", // descomentar para probar probar el back !
 	],
 
 	/*
@@ -125,5 +133,5 @@ export default {
 		extend(config, ctx) {},
 	},
 
-	serverMiddleware: ["~/api"],
+	// serverMiddleware: ["~/api"], // descomentar para probar probar el back !
 };

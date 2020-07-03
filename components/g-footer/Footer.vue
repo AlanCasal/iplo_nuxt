@@ -39,7 +39,7 @@
 
 <style scoped>
 	footer {
-		background-image: url('~assets/img/leer-t.jpg');
+		background-image: url('~assets/img/leer-t.webp');
 		background-attachment: fixed;
 		background-size: cover;
 		padding: 70px 0 10px 0;
