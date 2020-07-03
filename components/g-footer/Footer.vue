@@ -2,13 +2,13 @@
 	<footer class="wow animate__fadeInUp">
 		<section id="frase-section">
 			<div id="contenido">
-				<q id="frase">
-					Por mí se va a la ciudad doliente. Por mí
+				<p id="frase">
+					"Por mí se va a la ciudad doliente. Por mí
 					se va a las eternas penas. Por mí se va entre la gente perdida. La justicia movió a mi autor
 					supremo. Me hicieron el divino Poder, la suma Sabiduría y el Amor primero. Antes que yo
 					no hubo cosa creada, sino lo eterno, y yo permaneceré eternamente.
-					Dejad toda esperanza los que entráis.
-				</q>
+					Dejad toda esperanza los que entráis."
+				</p>
 				<br/>
 				<br/>
 				<p id="fuente">Dante Alighieri, La Divina Comedia.</p>
@@ -39,11 +39,14 @@
 
 <style scoped>
 	footer {
-		padding-bottom: 50px;
 		background-image: url('~assets/img/leer-t.jpg');
 		background-attachment: fixed;
 		background-size: cover;
-		padding: 30px 0 10px 0;
+		padding: 70px 0 10px 0;
+	}
+
+	#frase-section {
+		padding-bottom: 60px;
 	}
 
 	#frase-section q, #frase-section p {
@@ -64,7 +67,6 @@
 	}
 
 	#copyright {
-		margin-top: 50px;
 		font-family: Voltaire, sans-serif;
 		color: white;
 		font-size: 11px;

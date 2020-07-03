@@ -4,11 +4,6 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   }
 } : {};
 
-/** // FIXME: ALAN
- * arreglar ese paddin(?)
- * molesto en mobile
- */
-
 export default {
 	...routerBase,
 

@@ -11,19 +11,19 @@
 				<li>
 					<a @click="scroll_to('leer-section')" class="nav-link">
 						<i class="material-icons left">format_align_center</i>
-						<span class="hide-on-small-only">Leer</span>
+						<span>Leer</span>
 					</a>
 				</li>
 				<li>
 					<a @click="scroll_to('autor-section')" class="nav-link">
 						<i class="material-icons left">person_pin</i>
-						<span class="hide-on-small-only">Acerca del autor</span>
+						<span>Acerca del autor</span>
 					</a>
 				</li>
 				<li>
 					<a @click="scroll_to('contacto-section')" class="nav-link">
 						<i class="material-icons left">mail</i>
-						<span class="hide-on-small-only">Contacto</span>
+						<span>Contacto</span>
 					</a>
 				</li>
 			</ul>
@@ -313,7 +313,7 @@
 		margin-top: 30px;
 	} */
 
-	@media (max-width: 380px) {
+	@media (max-width: 600px) {
 		#nav-mobile {
 			padding: 0;
 		}
@@ -321,6 +321,10 @@
 		.material-icons {
 			padding: 0 !important;
 			margin: 0 !important;
+		}
+
+		.nav-link span {
+			display: none;
 		}
 	}
 

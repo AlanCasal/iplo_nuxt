@@ -124,6 +124,26 @@
 		}
 	}
 
+
+
+	@media (max-width: 499px) {
+		header {
+			-moz-box-shadow:    inset 0 0 150px black;
+			-webkit-box-shadow: inset 0 0 150px black;
+			box-shadow:         inset 0 0 150px black;
+		}
+	}
+	
+	@media (min-width: 500px) {
+		header {
+			-moz-box-shadow:    inset 0 0 300px black;
+			-webkit-box-shadow: inset 0 0 300px black;
+			box-shadow:         inset 0 0 300px black;
+		}
+	}
+
+
+
 	@media (min-width: 500px) and (max-width: 767px) {
 		header {
 			height: 600px;

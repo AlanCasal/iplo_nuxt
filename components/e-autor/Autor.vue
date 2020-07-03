@@ -79,7 +79,7 @@
 <style scoped>
 	#autor-section {
 		background: #f7f7f7;
-		padding-bottom: 30px;
+		padding-bottom: 70px;
 	}
 
 	#lionar-img {

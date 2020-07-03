@@ -37,7 +37,7 @@
 					{id: 'cap1', cap_circle: 'I', preludio: 'Preludio', cap_text: 'Capítulo I', time: '57', estado: 'En proceso de reedición final'},
 					{id: 'cap2', cap_circle: 'II', cap_text: 'Capítulo II', time: '37', estado: 'En proceso de reedición final'},
 					{id: 'cap3', cap_circle: 'III', cap_text: 'Capítulo III', time: '12', estado: 'En proceso de reedición final'},
-					{id: 'trad', cap_circle: 'T', cap_text: 'Traducciones', time: '12', estado: 'En proceso de reedición final'},
+					// {id: 'trad', cap_circle: 'T', cap_text: 'Traducciones', time: '12', estado: 'En proceso de reedición final'},
 				]
 			}
 		}
@@ -46,7 +46,7 @@
 
 <style scoped>
 	#leer-section {
-		padding-bottom: 50px;
+		padding-bottom: 70px;
 		background-image: url('~assets/img/leer-t.jpg');
 		background-attachment: fixed;
 		background-size: cover;
@@ -95,6 +95,10 @@
 	}
 
 	@media (max-width: 767px) {
+		h4 {
+			margin-bottom: 20px;
+		}
+
 		.cap-titulo,
 		.estado {
 			font-size: 18px;
@@ -119,10 +123,11 @@
 	@media (min-width: 768px) {
 		#contenido-wrapper {
 			width: 700px;
+			margin-top: 40px;
 		}
 
 		.capitulo-wrapper {
-			width: 25%;
+			width: 33.33%;
 			margin-left: auto;
 			left: auto;
 			right: auto;
@@ -135,10 +140,10 @@
 
 		.vr {
 			width   : 1px;
-			height  : 113px;
+			height  : 167px;
 			position: relative;
 			right   : 12px;
-			bottom  : 146px;
+			bottom  : 149px;
 			background-color: var(--iplo-red);
 		}
 

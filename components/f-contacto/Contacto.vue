@@ -5,9 +5,15 @@
 	
 			<div id="palabras">
 				<p v-for="(t, key) of texto" v-text="t" :key="key"></p>
+
+				<a href="mailto:lionarstormrage@gmail.com" class="btn waves-effect waves-light z-depth-1">
+					Enviar mensaje
+					<i class="material-icons right">mail</i>
+				</a>
 			</div>
-	
-			<contact-form/>
+
+			<!-- <contact-form/> -->
+
 		</div>
 
 	</section>
@@ -17,7 +23,7 @@
 	export default {
 		components: {
 			"section-header": () => import("@/components/section-header/SectionHeader.vue"),
-			"contact-form"  : () => import("@/components/f-contacto/Form.vue"),
+			// "contact-form"  : () => import("@/components/f-contacto/Form.vue"),
 		},
 
 		computed: {
@@ -29,7 +35,7 @@
 				return [
 					"¿Querés ponerte en contacto conmigo para que te envíe los demás capitulos, dejar un saludo o bien amenazarme de muerte?",
 					// "Podés enviarme un mensaje privado a través de mi página en facebook, instragram, twitter",
-					"Podés llenar el siguiente formulario y dejarme un mensaje, te responderé a la mayor brevedad posible."
+					"Podés hacerlo presionando el botón a continuación, te responderé a la mayor brevedad posible."
 				];
 			}
 		}
@@ -38,16 +44,25 @@
 
 <style scoped>
 	section {
-		padding-bottom: 50px;
+		padding-bottom: 70px;
 	}
 
 	p {
-		color: #666666;
+		color      : #666666;
 		font-family: "Open Sans", sans-serif;
-		font-style: italic;
-		margin: 20px 0;
-		text-align: justify;
+		font-style : italic;
+		margin     : 20px 0;
+		text-align : justify;
 	}
+
+	#palabras {
+		text-align: center;
+	}
+
+	a {
+		font-family: Voltaire, sans-serif;
+	}
+
 
 	@media (max-width: 767px) {
 		#palabras {

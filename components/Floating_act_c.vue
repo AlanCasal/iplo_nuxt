@@ -21,7 +21,7 @@
 	export default {
 		mounted() {
 			$(".fixed-action-btn").floatingActionButton({
-				direction   : 'right',
+				direction   : 'top',
 				hoverEnabled: false,
 			});
 		},
@@ -92,6 +92,11 @@
 		filter: invert(97%) sepia(92%) saturate(1%) hue-rotate(297deg) brightness(105%) contrast(96%);
 	}
 
+	ul {
+		bottom: 42px;
+		right: 12px;
+	}
+
 	li {
 		-webkit-transition: transform .5s;
 		-moz-transition   : transform .5s;
@@ -110,6 +115,17 @@
 		transition        : transform .2s;
 	}
 
+	.red-btn {
+		width: 35px;
+		height: 35px;
+	}
+
+	.red-btn img {
+		width: 15px;
+		margin-top: 9px;
+		width: 18px;
+	}
+
 	@media (max-width: 599px) {
 		#action-btn {
 			width: 40px;
@@ -118,21 +134,6 @@
 
 		#action-btn i {
 			font-size: 20px;
-		}
-
-		.red-btn {
-			width: 25px;
-			height: 25px;
-		}
-		
-		.red-btn img {
-			width: 15px;
-			margin-bottom: 4px;
-			margin-left: 5px;
-		}
-
-		ul {
-			left: 39px !important;
 		}
 	}
 
@@ -147,19 +148,13 @@
 			top: 5px;
 		}
 
-		.red-btn {
-			width: 35px;
-			height: 35px;
+		ul {
+			left: 7px !important;
+			bottom: 52px;
 		}
 
 		.red-btn img {
-			width: 20px;
-			margin-top: 8px;
-			margin-left: 8px;
-		}
-
-		ul {
-			left: 53px !important;
+			margin-right: 1px;
 		}
 	}
 </style>

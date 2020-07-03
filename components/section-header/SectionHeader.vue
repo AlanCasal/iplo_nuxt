@@ -22,10 +22,9 @@
 <style scoped>
 	h3 {
 		font-family: 'Voltaire', sans-serif;
-		padding-top: 50px;
+		padding-top: 70px;
 		font-size  : 36px;
 		font-weight: bold;
-		/* color         : #111; */
 		text-transform: uppercase;
 		text-align    : center;
 		position      : relative;
