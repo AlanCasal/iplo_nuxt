@@ -8,7 +8,6 @@ const nodemailer = require("nodemailer");
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/send-email', async (req, res) => {
-	// return setTimeout(() => res.send("ok"), 2000);
 	const {nombre, email, msg} = req.body;
 
 	const transporter = nodemailer.createTransport({
