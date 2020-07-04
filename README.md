@@ -20,7 +20,7 @@ git clone https://github.com/AlanCasal/iplo_nuxt.git
 npm install
 ```
 
-- #### Opcional:
+- #### Opcional ❕
 Hay una api muy simple en el backend (_momentaneamente en desuso_) para enviar emails desde la página a través de un formulario, usando el **smtp gratuito de Google.**
 Había que actualizar el hosting para poder implementarla pero el cliente
 optó por no hacerlo.
@@ -43,13 +43,13 @@ npm install @nuxtjs/axios express body-parser nodemailer
 ![Screenshot2](/screenshots/3.png?raw=true)
 
 
-## Despliegue 📦
+## Uso - Localhost 💻
 
 Una vez instalado, se puede correr el proyecto con el comando
 ```npm run dev```
 Se puede ver el proyecto ingresado a ``localhost:3000`` desde cualquier browser
 
-## Construido con 🛠️
+## Hecho con 🛠️
 
 * [NuxtJS](https://nuxtjs.org/) - Framework para [Vue.js](https://vuejs.org/)
 * [Express](https://expressjs.com/)
