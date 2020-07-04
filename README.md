@@ -25,7 +25,7 @@ Hay una api muy simple en el backend (_momentaneamente en desuso_) para enviar e
 Había que actualizar el hosting para poder implementarla pero el cliente
 optó por no hacerlo.
 
-Para testearla se necesitan los siguiente paquetes:
+Para testearla se necesitan los siguientes paquetes:
 ```
 npm install @nuxtjs/axios express body-parser nodemailer
 ```
