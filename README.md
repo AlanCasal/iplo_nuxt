@@ -46,7 +46,9 @@ npm install @nuxtjs/axios express body-parser nodemailer
 ## Uso - Localhost 💻
 
 Una vez instalado, se puede correr el proyecto con el comando
-```npm run dev```
+```
+npm run dev
+```
 Se puede ver el proyecto ingresado a ``localhost:3000`` desde cualquier browser
 
 ## Hecho con 🛠️
