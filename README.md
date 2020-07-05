@@ -2,12 +2,19 @@
 
 # Lágrimas Bajo Tierra I - Iluminados por la Oscuridad
 
+_2020_
+
 _Página web que presenta un libro próximo a lanzarse al mercado,
 con tres capítulos para leer gratis, información sobre el autor,
 y posibilidad de mandarle mensaje_
 
 
 https://lbtiluminadosporlaoscuridad.com.ar
+
+### Pre-requisitos 📋
+
+* [Node](https://nodejs.org/)
+
 
 ### Instalación 🔧
 
